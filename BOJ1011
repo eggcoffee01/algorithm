@@ -1,0 +1,52 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h> 
+
+int sqrt(int temp) {
+	int divided = temp / 2, remainder = temp % 2, sum = 0, i;
+	for (i = 1; sum <= divided; i++) {
+		sum += i;
+		if (sum > divided) {
+			sum -= i;
+			i--;
+			break;
+		}
+	}
+	divided -= sum;
+	while (divided > 0) {
+		divided -= 1;
+		remainder += 2;
+	}
+	
+	return remainder > i ? i + 1 : i;
+}
+
+int main() {
+	int t, x, y, i, j, k;
+	scanf("%d", &t);
+	for (i = 0; i < t; i++) {
+		if (i != 0) putchar('\n');
+		scanf("%d %d", &x, &y);
+		int temp = y - x;
+		int max = sqrt(temp);
+		int sum;
+		if ((max - 1) % 2 == 0) {
+			sum = (max) * ((max - 1) / 2);
+		}
+		else {
+			sum = (1 + max) * (max / 2) - max;
+		}
+		temp -= sum * 2 + max;
+		int index = (max - 1) * 2 + 1;
+		if (temp != 0 && temp < max) {
+			index++;
+		}
+		else if(temp != 0 && temp >= max){
+			index += temp / max;
+			index += temp % max > 0 ? 1 : 0;
+		}
+
+		printf("%d", index);
+
+	}
+	return 0;
+}
