@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+bool pnumArray[1000001];
+
+int main() {
+	int M, N;
+	scanf("%d %d", &M, &N);
+
+	for (int i = 2; i <= N; i++) {
+		pnumArray[i] = true;
+	}
+
+	for (int i = 2; i * i <= N; i++) {
+		if (pnumArray[i]) {
+			for (int j = i * i; j <= N; j += i)
+				pnumArray[j] = false;
+		}
+	}
+
+	for (int i = M; i <= N; i++) 
+		if (pnumArray[i])
+			printf("%d\n", i);
+}
