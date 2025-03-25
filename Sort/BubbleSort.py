@@ -9,7 +9,7 @@ def bubble_sort(array):
     if not swapped:
       break
 
-arr = [5,4,3,2,1]
-print(arr)
-bubble_sort(arr)
-print(arr)
+array = [5,4,3,2,1]
+print(array)
+bubble_sort(array)
+print(array)

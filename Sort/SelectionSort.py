@@ -7,7 +7,7 @@ def selection_sort(array):
         min_idx = j
     array[i], array[min_idx] = array[min_idx], array[i] 
 
-arr = [5,5,3,2,1]
-print(arr)
-selection_sort(arr)
-print(arr)
+array = [5,4,3,2,1]
+print(array)
+selection_sort(array)
+print(array)
