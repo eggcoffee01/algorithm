@@ -1,9 +1,9 @@
-def divide(array):
+def merge_sort(array):
   if len(array) <= 1:
     return array
   mid = len(array) // 2
-  left = divide(array[:mid])
-  right = divide(array[mid:])
+  left = merge_sort(array[:mid])
+  right = merge_sort(array[mid:])
   return conquer(left, right) 
   
 def conquer(left, right):
@@ -26,4 +26,4 @@ def conquer(left, right):
 
 array = [5,4,3,2,1]
 print(array)
-print(divide(array))
+print(merge_sort(array))
