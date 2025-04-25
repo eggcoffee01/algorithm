@@ -15,8 +15,3 @@ def quick_sort(array, start, end):
       right -= 1
   quick_sort(array, start, right)
   quick_sort(array, left, end)
-array = [9, 8, 7, 6, 5, 4, 3, 2, 1]
-array = [5, 7, 6, 5]
-print(array)
-quick_sort(array, 0, len(array) - 1)
-print(array)

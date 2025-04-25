@@ -7,8 +7,3 @@ def insertion_sort(array):
       array[j + 1] = array[j]
       j -= 1
     array[j + 1] = key
-
-array = [5,4,3,2,1]
-print(array)  
-insertion_sort(array)
-print(array)

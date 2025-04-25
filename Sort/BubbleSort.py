@@ -8,8 +8,3 @@ def bubble_sort(array):
         swapped = True
     if not swapped:
       break
-
-array = [5,4,3,2,1]
-print(array)
-bubble_sort(array)
-print(array)

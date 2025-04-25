@@ -23,7 +23,3 @@ def conquer(left, right):
     array.append(right[right_index])
     right_index += 1
   return array
-
-array = [5,4,3,2,1]
-print(array)
-print(merge_sort(array))
